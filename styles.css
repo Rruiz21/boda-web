@@ -31,9 +31,34 @@ header h1 {
     margin: 0;
 }
 
-header .fecha {
-    font-size: 1.2rem;
-    color: var(--color-secundario);
+/* Fecha Independiente */
+#fecha-especial {
+    background-color: var(--color-rosado);
+    padding: 30px 10px;
+    margin: 20px auto;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 500px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
+    color: white;
+}
+
+.decoracion-fecha h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    margin: 10px 0;
+    color: var(--color-dorado);
+}
+
+.decoracion-fecha p {
+    margin: 5px;
+    font-size: 1.1rem;
+    color: var(--color-fondo);
+}
+
+.icono {
+    font-size: 2rem;
+    color: var(--color-dorado);
 }
 
 /* Contador */
@@ -41,7 +66,6 @@ header .fecha {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     color: var(--color-secundario);
-    margin-bottom: 10px;
 }
 
 #contador-dias {
@@ -57,17 +81,11 @@ header .fecha {
     padding: 10px;
     border-radius: 8px;
     min-width: 80px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tiempo span {
     font-size: 2.5rem;
     font-weight: bold;
-}
-
-.tiempo p {
-    margin: 0;
-    font-size: 1rem;
 }
 
 /* Evento */
@@ -80,19 +98,11 @@ header .fecha {
 .imagen-evento img {
     width: 100%;
     max-width: 500px;
-    margin-top: 10px;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-.detalles h3 {
-    color: var(--color-secundario);
-    font-size: 1.8rem;
-    margin: 10px 0;
 }
 
 /* Mensaje */
-#mensaje {
+#mensaje p {
     font-size: 1.2rem;
     color: var(--color-rosado);
     font-style: italic;
@@ -103,5 +113,4 @@ header .fecha {
 footer {
     background-color: var(--color-beige);
     padding: 10px;
-    color: var(--color-principal);
 }
