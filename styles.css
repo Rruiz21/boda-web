@@ -1,152 +1,210 @@
-/* Estilo general */
+/* Estilos globales */
 body {
-    font-family: 'Merriweather', serif;
     margin: 0;
-    padding: 0;
-    background: #fafafa; /* Fondo elegante y minimalista */
-    color: #2e2e2e;
-    line-height: 1.6;
+    font-family: 'Montserrat', sans-serif;
+    color: #333;
+    background-color: #fef9f3; /* Fondo minimalista, color pastel */
 }
 
-/* Encabezado */
+h1, h2 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #8b5e34; /* Tono cálido y elegante */
+    text-align: center;
+}
+
+p {
+    text-align: center;
+    color: #5a5a5a;
+    margin: 10px 0;
+}
+
+a {
+    color: #8b5e34;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Navbar */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #fff;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px 0;
+    z-index: 1000;
+}
+
+.navbar a {
+    font-weight: bold;
+    color: #8b5e34;
+    transition: color 0.3s ease;
+}
+
+.navbar a:hover {
+    color: #d28e6a;
+}
+
+/* Header */
 header {
-    background-color: #4e5d94; /* Un azul pastel elegante */
-    color: #ffffff;
+    background-color: #f3e5d3;
     padding: 50px 20px;
+    margin-top: 50px; /* Para no solaparse con el navbar */
     text-align: center;
 }
 
 header h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 3.5em;
-    margin: 0;
+    font-size: 2.8rem;
 }
 
 header p {
-    font-size: 1.3em;
-    margin-top: 10px;
+    font-size: 1.2rem;
 }
 
-/* Contador regresivo */
+/* Cuenta regresiva */
 .countdown {
-    text-align: center;
+    background-color: #fff3e6;
     padding: 40px 20px;
-    background: #ffffff;
-    border-bottom: 2px solid #e0e0e0;
+    text-align: center;
 }
 
-#countdown {
+#countdown-timer {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    font-size: 1.5rem;
 }
 
-#countdown div {
-    text-align: center;
-    background: #f4f4f4;
-    padding: 15px 25px;
-    border-radius: 10px;
-    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+#countdown-timer div {
+    background: #fef4e8;
+    padding: 10px 20px;
+    border-radius: 8px;
+    color: #8b5e34;
 }
 
-#countdown span {
-    font-size: 2.8em;
-    font-weight: bold;
-    color: #4e5d94;
-}
-
-/* Sección historia */
-.story {
-    padding: 40px 20px;
-    background: #fafafa;
-    text-align: center;
-}
-
-.story h2 {
-    color: #4e5d94;
-}
-
-.story p {
-    font-size: 1.2em;
-}
-
-/* Galería de fotos */
+/* Galería */
 .photos {
     padding: 40px 20px;
-    background: #ffffff;
+    text-align: center;
 }
 
 .photo-gallery {
     display: flex;
-    gap: 20px;
     justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
 }
 
 .photo {
-    max-width: 300px;
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 /* Ubicación */
 .location {
     padding: 40px 20px;
     text-align: center;
-    background: #fafafa;
 }
 
-.location h2 {
-    color: #4e5d94;
+.location iframe {
+    width: 100%;
+    max-width: 600px;
+    height: 350px;
+    margin: 20px auto;
+    border-radius: 10px;
 }
 
-.location .button {
-    display: inline-block;
-    background-color: #4e5d94;
-    color: #ffffff;
-    padding: 10px 20px;
-    border-radius: 5px;
-    text-decoration: none;
-}
-
-.location .button:hover {
-    background-color: #35426b;
-}
-
-/* Confirmación */
+/* RSVP (Confirmación de asistencia) */
 .rsvp {
+    background-color: #fef4e8;
     padding: 40px 20px;
-    background: #ffffff;
+    text-align: center;
 }
 
 .rsvp form {
-    max-width: 400px;
-    margin: 0 auto;
     display: flex;
     flex-direction: column;
-    gap: 15px;
+    align-items: center;
+    gap: 10px;
 }
 
 .rsvp input, .rsvp textarea, .rsvp button {
+    width: 90%;
+    max-width: 400px;
     padding: 10px;
-    font-size: 1em;
-    border: 1px solid #4e5d94;
+    border: 1px solid #d7c7b5;
     border-radius: 5px;
+    font-size: 1rem;
 }
 
 .rsvp button {
-    background-color: #4e5d94;
-    color: #ffffff;
+    background-color: #8b5e34;
+    color: #fff;
+    font-weight: bold;
     cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 .rsvp button:hover {
-    background-color: #35426b;
+    background-color: #a6734d;
+}
+
+/* Botón de WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #25d366;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.whatsapp-float img {
+    width: 30px;
+    height: 30px;
 }
 
 /* Footer */
 footer {
+    background-color: #f3e5d3;
     text-align: center;
     padding: 20px;
-    background: #4e5d94;
-    color: #ffffff;
+    color: #8b5e34;
+    font-size: 0.9rem;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+section {
+    animation: fadeIn 0.7s ease-in-out;
 }
