@@ -3,105 +3,50 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
-    <!-- Fuentes y Estilos -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Invitación de Boda - Michelle & Oscar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&family=Dancing+Script&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Librería AOS -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header data-aos="fade-down" data-aos-duration="1000">
-        <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal">¡Nos Casamos! Acompáñanos en nuestro gran día</p>
+
+    <!-- Header -->
+    <header>
+        <h1 class="title">Michelle Argueta & Oscar Ruiz</h1>
+        <p class="subtitle">Nos Casamos</p>
+        <p class="date">21 de Septiembre de 2025 - 03:30 PM</p>
     </header>
 
-    <!-- Fecha Independiente -->
-    <section id="fecha-especial" data-aos="zoom-in" data-aos-duration="1200">
-        <div class="decoracion-fecha">
-            <span class="icono">&#9825;</span>
-            <p>El Gran Día</p>
-            <h2>21 de Septiembre de 2025</h2>
-            <p>3:30 PM</p>
+    <!-- Countdown -->
+    <section id="countdown">
+        <h2>Faltan:</h2>
+        <div id="countdown-timer">
+            <p id="days"></p><span>Días</span>
+            <p id="hours"></p><span>Horas</span>
+            <p id="minutes"></p><span>Minutos</span>
+            <p id="seconds"></p><span>Segundos</span>
         </div>
     </section>
 
-    <!-- Contador de Tiempo -->
-    <section id="contador" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Faltan</h2>
-        <div id="contador-dias">
-            <div class="tiempo">
-                <span id="dias">00</span>
-                <p>Días</p>
-            </div>
-            <div class="tiempo">
-                <span id="horas">00</span>
-                <p>Horas</p>
-            </div>
-            <div class="tiempo">
-                <span id="minutos">00</span>
-                <p>Minutos</p>
-            </div>
-            <div class="tiempo">
-                <span id="segundos">00</span>
-                <p>Segundos</p>
-            </div>
-        </div>
+    <!-- Location -->
+    <section id="location">
+        <h2>Lugar</h2>
+        <p>El Morrito</p>
+        <a href="https://goo.gl/maps/xyz" target="_blank">Ver ubicación en Google Maps</a>
     </section>
 
-    <!-- Historia -->
-    <section id="historia" data-aos="fade-up" data-aos-duration="1300">
-        <h2>Nuestra Historia</h2>
-        <p>Desde el primer día en que nos encontramos, sabíamos que algo mágico estaba por ocurrir. Después de años compartiendo momentos inolvidables, ¡estamos listos para dar el siguiente paso y celebrar nuestro amor con todos ustedes!</p>
+    <!-- Confirmation -->
+    <section id="confirmacion">
+        <h2>¡Confirma tu asistencia!</h2>
+        <button id="confirmar-btn">Confirmar Asistencia</button>
     </section>
 
-    <!-- Lugar del Evento -->
-    <section id="evento" data-aos="fade-left" data-aos-duration="1200">
-        <h2>Detalles del Evento</h2>
-        <div class="imagen-evento">
-            <img src="imagen-lugar.jpg" alt="Vista del Lugar">
-        </div>
-        <div class="detalles">
-            <p>Ubicación del Evento:</p>
-            <h3>El Morrito</h3>
-            <p>3:30 PM</p>
-        </div>
-    </section>
-
-    <!-- Mensaje Final -->
-    <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
-        <p>¡Esperamos contar contigo en este día tan especial! Acompáñanos en nuestra historia de amor.</p>
-    </section>
-
-    <!-- Pie de Página -->
-    <footer data-aos="fade-up" data-aos-duration="1000">
-        <p>Con amor, Michelle & Oscar</p>
+    <!-- Footer -->
+    <footer>
+        <p>¡Nos vemos en el gran día!</p>
     </footer>
 
-    <!-- Scripts -->
-    <script>
-        const fechaBoda = new Date('September 21, 2025 15:30:00').getTime();
-
-        const contador = setInterval(() => {
-            const ahora = new Date().getTime();
-            const diferencia = fechaBoda - ahora;
-
-            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-            document.getElementById('dias').innerText = dias;
-            document.getElementById('horas').innerText = horas;
-            document.getElementById('minutos').innerText = minutos;
-            document.getElementById('segundos').innerText = segundos;
-        }, 1000);
-    </script>
-    <!-- AOS Librería -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>
-        AOS.init();
-    </script>
+    <!-- JavaScript -->
+    <script src="script.js"></script>
 </body>
 </html>
