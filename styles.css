@@ -1,11 +1,11 @@
 /* Paleta de Colores */
 :root {
-    --color-principal: #6c201f;
-    --color-secundario: #ad4658;
-    --color-rosado: #c8858e;
-    --color-beige: #d2b6b4;
-    --color-dorado: #e2b168;
-    --color-fondo: #faf9fe;
+    --color-principal: #6c201f;  /* Rojo oscuro */
+    --color-secundario: #ad4658; /* Rojo suave */
+    --color-rosado: #c8858e;     /* Rosado antiguo */
+    --color-beige: #d2b6b4;      /* Beige claro */
+    --color-dorado: #e2b168;     /* Dorado */
+    --color-fondo: #faf9fe;      /* Fondo blanco suave */
 }
 
 /* Estilos Generales */
@@ -20,7 +20,8 @@ body {
 /* Encabezado */
 header {
     background-color: var(--color-beige);
-    padding: 20px 10px;
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
@@ -36,15 +37,11 @@ header .fecha {
 }
 
 /* Contador */
-#contador {
-    margin: 30px auto;
-    padding: 20px;
-}
-
 #contador h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
     color: var(--color-secundario);
+    margin-bottom: 10px;
 }
 
 #contador-dias {
@@ -56,11 +53,11 @@ header .fecha {
 
 .tiempo {
     background-color: var(--color-dorado);
+    color: white;
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    color: var(--color-fondo);
     min-width: 80px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .tiempo span {
@@ -69,16 +66,11 @@ header .fecha {
 }
 
 .tiempo p {
-    margin: 5px 0 0;
+    margin: 0;
     font-size: 1rem;
 }
 
 /* Evento */
-#evento {
-    margin: 40px auto;
-    padding: 20px;
-}
-
 #evento h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.5rem;
@@ -88,27 +80,23 @@ header .fecha {
 .imagen-evento img {
     width: 100%;
     max-width: 500px;
+    margin-top: 10px;
     border-radius: 10px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
-}
-
-.detalles {
-    margin-top: 15px;
-    font-size: 1.2rem;
-    color: var(--color-principal);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .detalles h3 {
-    font-size: 1.5rem;
     color: var(--color-secundario);
+    font-size: 1.8rem;
+    margin: 10px 0;
 }
 
 /* Mensaje */
 #mensaje {
-    margin: 30px auto;
     font-size: 1.2rem;
     color: var(--color-rosado);
     font-style: italic;
+    margin: 30px auto;
 }
 
 /* Pie de Página */
@@ -116,5 +104,4 @@ footer {
     background-color: var(--color-beige);
     padding: 10px;
     color: var(--color-principal);
-    font-size: 1rem;
 }
