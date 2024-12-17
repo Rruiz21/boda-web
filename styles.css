@@ -1,129 +1,109 @@
 /* Estilos Generales */
 body {
     font-family: 'Playfair Display', serif;
-    background-color: #fef7e2; /* Fondo suave */
-    color: #6c201f; /* Color de texto principal */
+    background-color: #e3dcd4;
+    color: #6c201f;
     margin: 0;
     padding: 0;
-    line-height: 1.6;
 }
 
 h1, h2 {
     font-family: 'Dancing Script', cursive;
-    color: #96132f; /* Un color llamativo para los encabezados */
+    color: #96132f;
 }
 
 /* Header */
 header {
     text-align: center;
-    padding: 50px;
+    padding: 50px 20px;
 }
 
 .title {
     font-size: 3em;
+    margin: 0;
     color: #96132f;
 }
 
 .subtitle {
-    font-size: 2em;
-    margin-top: 10px;
-    color: #96132f;
+    font-size: 2.5em;
+    margin: 10px 0;
+    color: #d1939c;
 }
 
-.date {
-    font-size: 1.5em;
+.description {
+    font-size: 1.3em;
     color: #6c201f;
-    margin-top: 10px;
+    margin-bottom: 15px;
+    letter-spacing: 1px;
 }
 
 /* Countdown */
 #countdown {
-    font-family: 'Playfair Display', serif;
     text-align: center;
+    margin: 30px auto;
+}
+
+#countdown h2 {
     font-size: 2em;
-    background-color: rgba(0, 0, 0, 0.4);
-    padding: 20px;
-    color: #fff;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 600px;
-    margin: 0 auto;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
-}
-
-#countdown p {
-    transition: transform 0.5s ease;
-}
-
-#countdown p:hover {
-    transform: scale(1.1); /* Efecto hover */
+    color: #96132f;
 }
 
 #countdown-timer {
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    gap: 30px;
+}
+
+#countdown-timer div {
+    text-align: center;
 }
 
 #countdown-timer p {
-    font-size: 1.8em;
+    font-size: 2em;
     margin: 0;
+    color: #96132f;
 }
 
 #countdown-timer span {
-    font-size: 1.2em;
-    color: #d1939c;
-}
-
-/* Botón de Confirmación */
-button {
-    background-color: #d1939c;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 50px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.3s ease;
-    display: block;
-    margin: 20px auto;
-}
-
-button:hover {
-    background-color: #96132f;
-    transform: scale(1.1);
-}
-
-/* Location */
-#location {
-    text-align: center;
-    margin-top: 50px;
-}
-
-#location a {
-    color: #96132f;
-    text-decoration: none;
-    font-size: 1.2em;
-}
-
-#location a:hover {
-    text-decoration: underline;
-}
-
-/* Footer */
-footer {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 1.2em;
+    font-size: 1em;
     color: #6c201f;
 }
 
-/* Animación de secciones al hacer scroll */
-section {
-    opacity: 0;
-    transition: opacity 1s ease-in-out;
-    margin-bottom: 50px;
+/* Separador decorativo */
+.separator {
+    margin: 50px auto;
+    width: 80%;
+    height: 1px;
+    background: linear-gradient(to right, #d1939c, #e3dcd4, #d1939c);
 }
 
-section.visible {
-    opacity: 1;
+/* Location */
+#location, #confirmacion {
+    text-align: center;
+    margin: 30px auto;
+}
+
+a {
+    text-decoration: none;
+    color: #96132f;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+button {
+    background-color: #96132f;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #6c201f;
+    transform: scale(1.1);
 }
