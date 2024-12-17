@@ -1,98 +1,80 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Michelle & Oscar - Invitación de Boda</title>
+    <title>Boda de Michelle & Oscar</title>
     <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <script defer src="script.js"></script>
 </head>
 <body>
-    <!-- Navbar -->
-    <div class="navbar">
-        <a href="#countdown">Cuenta Regresiva</a>
-        <a href="#photos">Galería</a>
-        <a href="#location">Ubicación</a>
-        <a href="#rsvp">Confirmación</a>
-    </div>
-
     <!-- Encabezado -->
     <header>
-        <h1>¡Nos casamos!</h1>
-        <p>Michelle Argueta & Oscar Ruiz</p>
-        <p>El Morrito | 21 de septiembre de 2025 | 03:30 p.m.</p>
+        <h1>Michelle Argueta & Oscar Ruiz</h1>
+        <p>¡Estamos encantados de celebrar nuestro gran día contigo!</p>
     </header>
 
-    <!-- Cuenta regresiva -->
-    <section id="countdown" class="countdown">
-        <h2>Faltan...</h2>
-        <div id="countdown-timer">
-            <div><span id="days">0</span> días</div>
-            <div><span id="hours">0</span> horas</div>
-            <div><span id="minutes">0</span> minutos</div>
-            <div><span id="seconds">0</span> segundos</div>
+    <!-- Contador regresivo -->
+    <section class="countdown">
+        <h2>Faltan:</h2>
+        <div id="countdown">
+            <div>
+                <span id="days">0</span>
+                <p>Días</p>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <p>Horas</p>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <p>Minutos</p>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <p>Segundos</p>
+            </div>
         </div>
     </section>
 
+    <!-- Historia de amor -->
+    <section class="story">
+        <h2>Nuestra Historia</h2>
+        <p>Desde que nos conocimos, cada momento ha sido un regalo. Únete a nosotros en esta celebración de amor eterno.</p>
+    </section>
+
     <!-- Galería de fotos -->
-    <section id="photos" class="photos">
-        <h2>Un vistazo a nuestra historia</h2>
+    <section class="photos">
+        <h2>Galería</h2>
         <div class="photo-gallery">
-            <img src="foto1.jpg" alt="Foto 1" class="photo">
-            <img src="foto2.jpg" alt="Foto 2" class="photo">
-            <img src="foto3.jpg" alt="Foto 3" class="photo">
+            <img src="images/novio.jpg" alt="Foto del novio" class="photo">
+            <img src="images/novia.jpg" alt="Foto de la novia" class="photo">
+            <img src="images/juntos.jpg" alt="Foto juntos" class="photo">
         </div>
     </section>
 
     <!-- Ubicación -->
-    <section id="location" class="location">
-        <h2>El lugar</h2>
-        <p>Haz clic en el enlace para abrir la ubicación:</p>
-        <a href="https://goo.gl/maps/E7EXAMPLE" target="_blank" class="button">Ver en Google Maps</a>
+    <section class="location">
+        <h2>Detalles del Evento</h2>
+        <p><strong>Ubicación:</strong> El Morrito</p>
+        <p><strong>Hora:</strong> 3:30 PM</p>
+        <a href="https://www.google.com/maps?q=El+Morrito" target="_blank" class="button">Ver Ubicación</a>
     </section>
 
-    <!-- Confirmación de asistencia -->
-    <section id="rsvp" class="rsvp">
-        <h2>Confirma tu asistencia</h2>
-        <form>
-            <input type="text" placeholder="Tu nombre completo" required>
-            <input type="email" placeholder="Tu correo electrónico" required>
-            <textarea placeholder="Deja un mensaje para los novios..." rows="4"></textarea>
-            <button type="submit" class="button">Enviar</button>
+    <!-- Confirmación -->
+    <section class="rsvp">
+        <h2>Confirma tu Asistencia</h2>
+        <form action="https://formspree.io/f/mwkjlgzy" method="POST">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo" required>
+            <textarea name="message" placeholder="Mensaje o cantidad de asistentes" required></textarea>
+            <button type="submit">Enviar Confirmación</button>
         </form>
     </section>
 
-    <!-- Botón flotante de WhatsApp -->
-    <div class="whatsapp-float">
-        <a href="https://wa.me/50312345678" target="_blank">
-            <img src="whatsapp-icon.png" alt="WhatsApp">
-        </a>
-    </div>
-
     <!-- Footer -->
     <footer>
-        <p>Con mucho amor, Michelle & Oscar</p>
+        <p>Con amor, Michelle & Oscar.</p>
     </footer>
-
-    <!-- Script para la cuenta regresiva -->
-    <script>
-        const countdown = () => {
-            const weddingDate = new Date("2025-09-21T15:30:00");
-            const now = new Date();
-            const timeLeft = weddingDate - now;
-
-            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            const seconds = Math.floor((timeLeft % (1000)) / 1000);
-
-            document.getElementById("days").textContent = days;
-            document.getElementById("hours").textContent = hours;
-            document.getElementById("minutes").textContent = minutes;
-            document.getElementById("seconds").textContent = seconds;
-        };
-
-        setInterval(countdown, 1000);
-    </script>
 </body>
 </html>
