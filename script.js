@@ -19,3 +19,15 @@ setInterval(() => {
         document.getElementById("countdown").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
     }
 }, 1000);
+
+// Mostrar secciones al hacer scroll
+window.addEventListener('scroll', function() {
+    const sections = document.querySelectorAll('section');
+    const scrollPosition = window.innerHeight + window.scrollY;
+
+    sections.forEach(function(section) {
+        if (scrollPosition >= section.offsetTop) {
+            section.classList.add('visible');
+        }
+    });
+});
