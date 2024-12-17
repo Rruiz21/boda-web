@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boda de Michelle & Oscar</title>
+    <link rel="stylesheet" href="styles.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <!-- Encabezado -->
+    <header>
+        <h1>Michelle Argueta & Oscar Ruiz</h1>
+        <p>¡Estamos encantados de celebrar nuestro gran día contigo!</p>
+    </header>
+
+    <!-- Contador regresivo -->
+    <section class="countdown">
+        <h2>Faltan:</h2>
+        <div id="countdown">
+            <div>
+                <span id="days">0</span>
+                <p>Días</p>
+            </div>
+            <div>
+                <span id="hours">0</span>
+                <p>Horas</p>
+            </div>
+            <div>
+                <span id="minutes">0</span>
+                <p>Minutos</p>
+            </div>
+            <div>
+                <span id="seconds">0</span>
+                <p>Segundos</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Historia de amor -->
+    <section class="story">
+        <h2>Nuestra Historia</h2>
+        <p>Desde que nos conocimos, cada momento ha sido un regalo. Únete a nosotros en esta celebración de amor eterno.</p>
+    </section>
+
+    <!-- Galería de fotos -->
+    <section class="photos">
+        <h2>Galería</h2>
+        <div class="photo-gallery">
+            <img src="images/novio.jpg" alt="Foto del novio" class="photo">
+            <img src="images/novia.jpg" alt="Foto de la novia" class="photo">
+            <img src="images/juntos.jpg" alt="Foto juntos" class="photo">
+        </div>
+    </section>
+
+    <!-- Ubicación -->
+    <section class="location">
+        <h2>Detalles del Evento</h2>
+        <p><strong>Ubicación:</strong> El Morrito</p>
+        <p><strong>Hora:</strong> 3:30 PM</p>
+        <a href="https://www.google.com/maps?q=El+Morrito" target="_blank" class="button">Ver Ubicación</a>
+    </section>
+
+    <!-- Confirmación -->
+    <section class="rsvp">
+        <h2>Confirma tu Asistencia</h2>
+        <form action="https://formspree.io/f/mwkjlgzy" method="POST">
+            <input type="text" name="name" placeholder="Tu Nombre" required>
+            <input type="email" name="email" placeholder="Tu Correo" required>
+            <textarea name="message" placeholder="Mensaje o cantidad de asistentes" required></textarea>
+            <button type="submit">Enviar Confirmación</button>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>Con amor, Michelle & Oscar.</p>
+    </footer>
+</body>
+</html>
