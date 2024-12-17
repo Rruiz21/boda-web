@@ -1,11 +1,11 @@
 /* Paleta de Colores */
 :root {
-    --color-principal: #6c201f;  /* Rojo oscuro */
-    --color-secundario: #ad4658; /* Rojo suave */
-    --color-rosado: #c8858e;     /* Rosado antiguo */
-    --color-beige: #d2b6b4;      /* Beige claro */
-    --color-dorado: #e2b168;     /* Dorado */
-    --color-fondo: #faf9fe;      /* Fondo blanco suave */
+    --color-principal: #6c201f;
+    --color-secundario: #ad4658;
+    --color-rosado: #c8858e;
+    --color-beige: #d2b6b4;
+    --color-dorado: #e2b168;
+    --color-fondo: #faf9fe;
 }
 
 /* Estilos Generales */
@@ -15,84 +15,62 @@ body {
     background-color: var(--color-fondo);
     color: var(--color-principal);
     text-align: center;
+    overflow-x: hidden;
+}
+
+h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    margin: 0.5em 0;
+    color: var(--color-secundario);
+}
+
+p {
+    line-height: 1.6;
+    color: var(--color-principal);
 }
 
 /* Encabezado */
 header {
     background-color: var(--color-beige);
-    padding: 40px 10px 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 20px;
 }
 
 header h1 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3.2rem;
-    color: var(--color-principal);
-    margin: 0;
+    font-size: 3.5rem;
 }
 
-header .mensaje-principal {
+.mensaje-principal {
     font-family: 'Playfair Display', serif;
     font-size: 1.8rem;
-    color: var(--color-secundario);
-    margin-top: 15px;
-    letter-spacing: 1px;
-    line-height: 1.5;
+    color: var(--color-dorado);
 }
 
-/* Fecha Independiente */
+/* Fecha Especial */
 #fecha-especial {
+    padding: 30px;
+    margin-top: 20px;
     background-color: var(--color-rosado);
-    padding: 30px 10px;
-    margin: 30px auto;
-    border-radius: 10px;
-    width: 80%;
-    max-width: 500px;
-    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.15);
     color: white;
-}
-
-.decoracion-fecha h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
-    margin: 10px 0;
-    color: var(--color-dorado);
-}
-
-.decoracion-fecha p {
-    margin: 5px;
-    font-size: 1.2rem;
-    color: var(--color-fondo);
-}
-
-.icono {
-    font-size: 2rem;
-    color: var(--color-dorado);
 }
 
 /* Contador */
-#contador h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: var(--color-secundario);
-}
-
-#contador-dias {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-top: 20px;
-}
-
-.tiempo {
+#contador .tiempo {
     background-color: var(--color-dorado);
     color: white;
+    display: inline-block;
     padding: 10px;
-    border-radius: 8px;
-    min-width: 80px;
+    margin: 5px;
+    border-radius: 10px;
 }
 
-.tiempo span {
-    font-size: 2.5rem;
-    font-weight: bold;
+/* Historia */
+#historia, #evento {
+    padding: 20px;
+}
+
+/* Imágenes */
+.imagen-evento img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
 }
