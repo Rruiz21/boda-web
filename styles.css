@@ -1,173 +1,129 @@
-/* Paleta de Colores */
-:root {
-    --color-principal: #96132f; /* Color fuerte para encabezados */
-    --color-secundario: #a49182; /* Texto secundario */
-    --color-fondo: #e3dcd4; /* Fondo principal */
-    --color-acento: #d1939c; /* Colores de detalles */
-    --color-neutro: #faf9fe; /* Fondo neutro */
-}
-
 /* Estilos Generales */
 body {
+    font-family: 'Playfair Display', serif;
+    background-color: #fef7e2; /* Fondo suave */
+    color: #6c201f; /* Color de texto principal */
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-secundario);
-    text-align: center;
-    overflow-x: hidden;
+    padding: 0;
     line-height: 1.6;
 }
 
-/* Encabezado */
+h1, h2 {
+    font-family: 'Dancing Script', cursive;
+    color: #96132f; /* Un color llamativo para los encabezados */
+}
+
+/* Header */
 header {
-    background-color: var(--color-fondo);
-    padding: 40px 20px;
-    border-bottom: 4px solid var(--color-acento);
+    text-align: center;
+    padding: 50px;
 }
 
-header h1 {
-    font-size: 3.8rem;
-    color: var(--color-principal);
-    letter-spacing: 2px;
+.title {
+    font-size: 3em;
+    color: #96132f;
 }
 
-.mensaje-principal {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.2rem;
-    color: var(--color-acento);
+.subtitle {
+    font-size: 2em;
+    margin-top: 10px;
+    color: #96132f;
 }
 
-/* Fecha Especial */
-#fecha-especial {
-    padding: 30px;
-    margin: 40px auto;
-    background-color: var(--color-neutro);
-    color: var(--color-principal);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+.date {
+    font-size: 1.5em;
+    color: #6c201f;
+    margin-top: 10px;
 }
 
-#fecha-especial h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
-}
-
-/* Contador */
-#contador {
-    margin: 40px auto;
-    background-color: var(--color-acento);
+/* Countdown */
+#countdown {
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    font-size: 2em;
+    background-color: rgba(0, 0, 0, 0.4);
     padding: 20px;
-    border-radius: 15px;
+    color: #fff;
+    border-radius: 10px;
+    width: 80%;
     max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin: 0 auto;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
 }
 
-#contador .tiempo {
-    display: inline-block;
-    background-color: var(--color-principal);
-    color: white;
-    margin: 10px;
-    padding: 15px 25px;
-    border-radius: 8px;
-    font-size: 2rem;
-    font-weight: bold;
+#countdown p {
+    transition: transform 0.5s ease;
 }
 
-/* Historia */
-#historia {
-    padding: 40px;
-    background-color: var(--color-fondo);
+#countdown p:hover {
+    transform: scale(1.1); /* Efecto hover */
 }
 
-/* Lugar del Evento */
-#evento {
-    padding: 40px;
-    background-color: var(--color-neutro);
-    color: var(--color-principal);
+#countdown-timer {
+    display: flex;
+    justify-content: space-around;
 }
 
-.imagen-evento img {
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
+#countdown-timer p {
+    font-size: 1.8em;
+    margin: 0;
 }
 
-.imagen-evento img:hover {
-    transform: scale(1.05);
+#countdown-timer span {
+    font-size: 1.2em;
+    color: #d1939c;
 }
 
-/* Mensaje Final */
-#mensaje {
-    padding: 40px;
-    color: var(--color-principal);
-    background-color: var(--color-fondo);
-    font-size: 1.8rem;
-    font-weight: bold;
-    border-radius: 8px;
+/* Botón de Confirmación */
+button {
+    background-color: #d1939c;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 50px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: block;
+    margin: 20px auto;
+}
+
+button:hover {
+    background-color: #96132f;
+    transform: scale(1.1);
+}
+
+/* Location */
+#location {
+    text-align: center;
+    margin-top: 50px;
+}
+
+#location a {
+    color: #96132f;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+#location a:hover {
+    text-decoration: underline;
 }
 
 /* Footer */
 footer {
-    padding: 20px;
-    background-color: var(--color-principal);
-    color: var(--color-fondo);
+    text-align: center;
+    margin-top: 40px;
+    font-size: 1.2em;
+    color: #6c201f;
 }
 
-/* Botones */
-button {
-    padding: 12px 25px;
-    background-color: var(--color-acento);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1.2rem;
-}
-
-button:hover {
-    background-color: var(--color-principal);
-    transform: translateY(-3px);
-}
-
-/* Espaciado y márgenes */
-section {
-    margin: 40px 0;
-    padding: 40px;
-}
-
-/* Animaciones de apariciones */
+/* Animación de secciones al hacer scroll */
 section {
     opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
+    transition: opacity 1s ease-in-out;
+    margin-bottom: 50px;
 }
 
 section.visible {
     opacity: 1;
-    transform: translateY(0);
-}
-
-/* Asegura la visualización de la página al hacer scroll */
-@media screen and (max-width: 768px) {
-    header h1 {
-        font-size: 2.5rem;
-    }
-
-    .mensaje-principal {
-        font-size: 1.8rem;
-    }
-
-    #fecha-especial h2 {
-        font-size: 2rem;
-    }
-
-    .tiempo {
-        font-size: 1.5rem;
-    }
-
-    #mensaje {
-        font-size: 1.5rem;
-    }
 }
