@@ -4,30 +4,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
-    <link rel="stylesheet" href="styles.css">
-    <!-- Fuentes de Google -->
+    <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <!-- Librería AOS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <!-- Encabezado -->
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
         <p class="mensaje-principal">¡Nos Casamos! Acompáñanos en nuestro gran día</p>
     </header>
 
     <!-- Fecha Independiente -->
-    <section id="fecha-especial">
+    <section id="fecha-especial" data-aos="zoom-in" data-aos-duration="1200">
         <div class="decoracion-fecha">
             <span class="icono">&#9825;</span>
             <p>El Gran Día</p>
             <h2>21 de Septiembre de 2025</h2>
             <p>3:30 PM</p>
-            <div class="linea"></div>
         </div>
     </section>
 
-    <!-- Contador de tiempo -->
-    <section id="contador">
+    <!-- Contador de Tiempo -->
+    <section id="contador" data-aos="fade-up" data-aos-duration="1200">
         <h2>Faltan</h2>
         <div id="contador-dias">
             <div class="tiempo">
@@ -49,8 +50,14 @@
         </div>
     </section>
 
-    <!-- Detalles del Evento -->
-    <section id="evento">
+    <!-- Historia -->
+    <section id="historia" data-aos="fade-up" data-aos-duration="1300">
+        <h2>Nuestra Historia</h2>
+        <p>Desde el primer día en que nos encontramos, sabíamos que algo mágico estaba por ocurrir. Después de años compartiendo momentos inolvidables, ¡estamos listos para dar el siguiente paso y celebrar nuestro amor con todos ustedes!</p>
+    </section>
+
+    <!-- Lugar del Evento -->
+    <section id="evento" data-aos="fade-left" data-aos-duration="1200">
         <h2>Detalles del Evento</h2>
         <div class="imagen-evento">
             <img src="imagen-lugar.jpg" alt="Vista del Lugar">
@@ -63,16 +70,16 @@
     </section>
 
     <!-- Mensaje Final -->
-    <section id="mensaje">
+    <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
         <p>¡Esperamos contar contigo en este día tan especial! Acompáñanos en nuestra historia de amor.</p>
     </section>
 
     <!-- Pie de Página -->
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="1000">
         <p>Con amor, Michelle & Oscar</p>
     </footer>
 
-    <!-- Script para Contador -->
+    <!-- Scripts -->
     <script>
         const fechaBoda = new Date('September 21, 2025 15:30:00').getTime();
 
@@ -90,6 +97,11 @@
             document.getElementById('minutos').innerText = minutos;
             document.getElementById('segundos').innerText = segundos;
         }, 1000);
+    </script>
+    <!-- AOS Librería -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
     </script>
 </body>
 </html>
