@@ -20,22 +20,31 @@ body {
 /* Encabezado */
 header {
     background-color: var(--color-beige);
-    padding: 20px;
+    padding: 40px 10px 20px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 header h1 {
     font-family: 'Great Vibes', cursive;
-    font-size: 3rem;
+    font-size: 3.2rem;
     color: var(--color-principal);
     margin: 0;
+}
+
+header .mensaje-principal {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: var(--color-secundario);
+    margin-top: 15px;
+    letter-spacing: 1px;
+    line-height: 1.5;
 }
 
 /* Fecha Independiente */
 #fecha-especial {
     background-color: var(--color-rosado);
     padding: 30px 10px;
-    margin: 20px auto;
+    margin: 30px auto;
     border-radius: 10px;
     width: 80%;
     max-width: 500px;
@@ -45,14 +54,14 @@ header h1 {
 
 .decoracion-fecha h2 {
     font-family: 'Great Vibes', cursive;
-    font-size: 2.8rem;
+    font-size: 3rem;
     margin: 10px 0;
     color: var(--color-dorado);
 }
 
 .decoracion-fecha p {
     margin: 5px;
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     color: var(--color-fondo);
 }
 
@@ -86,31 +95,4 @@ header h1 {
 .tiempo span {
     font-size: 2.5rem;
     font-weight: bold;
-}
-
-/* Evento */
-#evento h2 {
-    font-family: 'Great Vibes', cursive;
-    font-size: 2.5rem;
-    color: var(--color-secundario);
-}
-
-.imagen-evento img {
-    width: 100%;
-    max-width: 500px;
-    border-radius: 10px;
-}
-
-/* Mensaje */
-#mensaje p {
-    font-size: 1.2rem;
-    color: var(--color-rosado);
-    font-style: italic;
-    margin: 30px auto;
-}
-
-/* Pie de Página */
-footer {
-    background-color: var(--color-beige);
-    padding: 10px;
 }
