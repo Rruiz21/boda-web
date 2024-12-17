@@ -1,98 +1,120 @@
-/* Estilos generales */
+/* Paleta de Colores */
+:root {
+    --color-principal: #6c201f;
+    --color-secundario: #ad4658;
+    --color-rosado: #c8858e;
+    --color-beige: #d2b6b4;
+    --color-dorado: #e2b168;
+    --color-fondo: #faf9fe;
+}
+
+/* Estilos Generales */
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
-    background-color: #faf9fe;
-    color: #928387;
+    background-color: var(--color-fondo);
+    color: var(--color-principal);
     text-align: center;
 }
 
 /* Encabezado */
 header {
-    background-color: #ded9df;
-    padding: 20px 0;
-    font-family: 'Great Vibes', cursive;
+    background-color: var(--color-beige);
+    padding: 20px 10px;
 }
 
 header h1 {
-    margin: 0;
+    font-family: 'Great Vibes', cursive;
     font-size: 3rem;
-    color: #bfb2c3;
+    color: var(--color-principal);
+    margin: 0;
 }
 
 header .fecha {
     font-size: 1.2rem;
-    color: #928387;
+    color: var(--color-secundario);
 }
 
-/* Contador de días */
+/* Contador */
 #contador {
-    margin: 40px 0;
+    margin: 30px auto;
+    padding: 20px;
 }
 
 #contador h2 {
-    font-size: 2rem;
-    color: #d5c2a2;
     font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--color-secundario);
 }
 
 #contador-dias {
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 15px;
+    margin-top: 20px;
 }
 
 .tiempo {
-    background-color: #ded9df;
+    background-color: var(--color-dorado);
     padding: 10px;
     border-radius: 8px;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    color: var(--color-fondo);
     min-width: 80px;
 }
 
 .tiempo span {
     font-size: 2.5rem;
-    color: #bfb2c3;
-    display: block;
     font-weight: bold;
 }
 
 .tiempo p {
-    margin: 0;
-    color: #928387;
+    margin: 5px 0 0;
+    font-size: 1rem;
 }
 
-/* Detalles del Evento */
+/* Evento */
 #evento {
-    margin: 40px 0;
+    margin: 40px auto;
+    padding: 20px;
 }
 
 #evento h2 {
-    font-size: 2rem;
     font-family: 'Great Vibes', cursive;
-    color: #d5c2a2;
+    font-size: 2.5rem;
+    color: var(--color-secundario);
 }
 
 .imagen-evento img {
     width: 100%;
     max-width: 500px;
-    border-radius: 8px;
+    border-radius: 10px;
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
 }
 
 .detalles {
-    margin-top: 20px;
+    margin-top: 15px;
+    font-size: 1.2rem;
+    color: var(--color-principal);
 }
 
 .detalles h3 {
     font-size: 1.5rem;
-    color: #928387;
+    color: var(--color-secundario);
 }
 
-/* Pie de página */
+/* Mensaje */
+#mensaje {
+    margin: 30px auto;
+    font-size: 1.2rem;
+    color: var(--color-rosado);
+    font-style: italic;
+}
+
+/* Pie de Página */
 footer {
-    margin-top: 40px;
+    background-color: var(--color-beige);
     padding: 10px;
-    background-color: #ded9df;
-    color: #928387;
+    color: var(--color-principal);
     font-size: 1rem;
 }
