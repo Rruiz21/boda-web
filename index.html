@@ -14,10 +14,10 @@
     <!-- Encabezado -->
     <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal">¡Nos Casamos! Acompáñanos en nuestro gran día</p>
+        <p class="mensaje-principal"><span class="destacado">¡Nos Casamos!</span> Acompáñanos en nuestro gran día</p>
     </header>
 
-    <!-- Fecha Independiente -->
+    <!-- Fecha Especial -->
     <section id="fecha-especial" data-aos="zoom-in" data-aos-duration="1200">
         <div class="decoracion-fecha">
             <span class="icono">&#9825;</span>
@@ -27,7 +27,7 @@
         </div>
     </section>
 
-    <!-- Contador de Tiempo -->
+    <!-- Contador -->
     <section id="contador" data-aos="fade-up" data-aos-duration="1200">
         <h2>Faltan</h2>
         <div id="contador-dias">
@@ -80,24 +80,7 @@
     </footer>
 
     <!-- Scripts -->
-    <script>
-        const fechaBoda = new Date('September 21, 2025 15:30:00').getTime();
-
-        const contador = setInterval(() => {
-            const ahora = new Date().getTime();
-            const diferencia = fechaBoda - ahora;
-
-            const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
-            const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
-            const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
-
-            document.getElementById('dias').innerText = dias;
-            document.getElementById('horas').innerText = horas;
-            document.getElementById('minutos').innerText = minutos;
-            document.getElementById('segundos').innerText = segundos;
-        }, 1000);
-    </script>
+    <script src="script.js"></script>
     <!-- AOS Librería -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
