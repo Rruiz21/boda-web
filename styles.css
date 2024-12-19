@@ -1,10 +1,10 @@
 /* Paleta de Colores */
 :root {
-    --color-principal: #96132f; /* Color fuerte para encabezados */
-    --color-secundario: #a49182; /* Texto secundario */
-    --color-fondo: #e3dcd4; /* Fondo principal */
-    --color-acento: #d1939c; /* Colores de detalles */
-    --color-neutro: #faf9fe; /* Fondo neutro */
+    --color-principal: #96132f;
+    --color-secundario: #a49182;
+    --color-fondo: #e3dcd4;
+    --color-acento: #d1939c;
+    --color-neutro: #faf9fe;
 }
 
 /* Estilos Generales */
@@ -34,140 +34,52 @@ header h1 {
 .mensaje-principal {
     font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: var(--color-acento);
+    color: var(--color-secundario);
 }
 
-/* Fecha Especial */
-#fecha-especial {
-    padding: 30px;
-    margin: 40px auto;
-    background-color: var(--color-neutro);
+.mensaje-principal .destacado {
     color: var(--color-principal);
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-#fecha-especial h2 {
-    font-size: 2.5rem;
-    margin-bottom: 10px;
+    font-size: 2.8rem;
+    text-shadow: 2px 2px var(--color-acento);
 }
 
 /* Contador */
 #contador {
-    margin: 40px auto;
-    background-color: var(--color-acento);
+    margin: 30px auto;
     padding: 20px;
+    background-color: var(--color-acento);
     border-radius: 15px;
     max-width: 600px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 #contador .tiempo {
     display: inline-block;
     background-color: var(--color-principal);
     color: white;
-    margin: 10px;
-    padding: 15px 25px;
+    margin: 5px;
+    padding: 10px 15px;
     border-radius: 8px;
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
 }
 
 /* Historia */
-#historia {
-    padding: 40px;
-    background-color: var(--color-fondo);
-}
-
-/* Lugar del Evento */
-#evento {
-    padding: 40px;
-    background-color: var(--color-neutro);
-    color: var(--color-principal);
-}
-
-.imagen-evento img {
-    max-width: 100%;
-    border-radius: 15px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-
-.imagen-evento img:hover {
-    transform: scale(1.05);
-}
-
-/* Mensaje Final */
-#mensaje {
-    padding: 40px;
-    color: var(--color-principal);
-    background-color: var(--color-fondo);
-    font-size: 1.8rem;
-    font-weight: bold;
-    border-radius: 8px;
-}
-
-/* Footer */
-footer {
-    padding: 20px;
-    background-color: var(--color-principal);
-    color: var(--color-fondo);
-}
-
-/* Botones */
-button {
-    padding: 12px 25px;
-    background-color: var(--color-acento);
-    color: white;
-    border: none;
-    border-radius: 12px;
-    cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
-    font-size: 1.2rem;
-}
-
-button:hover {
-    background-color: var(--color-principal);
-    transform: translateY(-3px);
-}
-
-/* Espaciado y márgenes */
-section {
+#historia, #evento, #mensaje {
     margin: 40px 0;
     padding: 40px;
+    background-color: var(--color-neutro);
+    border-radius: 15px;
 }
 
-/* Animaciones de apariciones */
-section {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.6s ease, transform 0.6s ease;
-}
-
-section.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* Asegura la visualización de la página al hacer scroll */
-@media screen and (max-width: 768px) {
+/* Media Queries */
+@media (max-width: 768px) {
     header h1 {
         font-size: 2.5rem;
     }
-
     .mensaje-principal {
         font-size: 1.8rem;
     }
-
-    #fecha-especial h2 {
-        font-size: 2rem;
-    }
-
-    .tiempo {
-        font-size: 1.5rem;
-    }
-
-    #mensaje {
-        font-size: 1.5rem;
+    #contador .tiempo {
+        font-size: 1.2rem;
     }
 }
