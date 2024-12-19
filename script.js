@@ -1,4 +1,4 @@
-// Contador de cuenta regresiva
+// Contador
 const weddingDate = new Date("2025-09-21T15:30:00");
 
 setInterval(() => {
@@ -11,11 +11,11 @@ setInterval(() => {
         const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
         const seconds = Math.floor((timeLeft / 1000) % 60);
 
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
+        document.getElementById("dias").textContent = days;
+        document.getElementById("horas").textContent = hours;
+        document.getElementById("minutos").textContent = minutes;
+        document.getElementById("segundos").textContent = seconds;
     } else {
-        document.getElementById("countdown").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
+        document.getElementById("contador-dias").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
     }
 }, 1000);
