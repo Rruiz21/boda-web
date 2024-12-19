@@ -1,28 +1,26 @@
-/* Contador */
-#contador .contador-grid {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    flex-wrap: wrap; /* Asegura que se ajusten en dispositivos pequeños */
+const weddingDate = new Date("2025-09-21T15:30:00");
+
+function updateCountdown() {
+    const now = new Date();
+    const timeLeft = weddingDate - now;
+
+    if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+        const seconds = Math.floor((timeLeft / 1000) % 60);
+
+        document.getElementById("days").textContent = days.toString().padStart(2, "0");
+        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
+        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
+        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
+    } else {
+        document.getElementById("contador").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
+    }
 }
 
-#contador .tiempo {
-    padding: 20px;
-    background-color: var(--color-acento);
-    color: var(--color-neutro);
-    border-radius: 8px;
-    text-align: center;
-    width: 100px; /* Aumenta el ancho */
-    height: 120px; /* Ajusta la altura */
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-size: 1.5rem; /* Tamaño del número */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
+// Actualiza cada segundo
+setInterval(updateCountdown, 1000);
 
-#contador .tiempo p {
-    font-size: 1rem; /* Tamaño de las etiquetas (Días, Horas, etc.) */
-    margin: 5px 0 0;
-}
+// Actualización inicial
+updateCountdown();
