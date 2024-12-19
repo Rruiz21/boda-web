@@ -1,4 +1,4 @@
-// Contador
+// Configuración del Contador
 const weddingDate = new Date("2025-09-21T15:30:00");
 
 setInterval(() => {
@@ -16,6 +16,6 @@ setInterval(() => {
         document.getElementById("minutos").textContent = minutes;
         document.getElementById("segundos").textContent = seconds;
     } else {
-        document.getElementById("contador-dias").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
+        document.getElementById("contador").innerHTML = "<h3>¡Hoy es nuestro gran día!</h3>";
     }
 }, 1000);
