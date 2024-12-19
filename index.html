@@ -3,76 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda - Michelle & Oscar</title>
+    <title>Invitación de Boda</title>
     <!-- Fuentes y Estilos -->
     <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Animaciones AOS -->
+    <!-- Librería AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <!-- Encabezado -->
     <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal"><span class="destacado">¡Nos Casamos!</span> Acompáñanos a celebrar nuestro amor</p>
+        <p class="mensaje-principal">
+            <span class="nos-casamos">¡Nos Casamos!</span>
+            <br>
+            <span class="detalle-evento">Acompáñanos a celebrar nuestro amor</span>
+            <br>
+            <span class="detalle-evento">Fecha: 21 de septiembre de 2025</span>
+            <br>
+            <span class="detalle-evento">Hora: 3:30 p.m.</span>
+        </p>
     </header>
 
-    <!-- Fecha Especial -->
-    <section id="fecha-especial" data-aos="zoom-in" data-aos-duration="1200">
-        <h2>El Gran Día</h2>
-        <p class="subtitulo">21 de Septiembre de 2025 - 3:30 PM</p>
-    </section>
-
-    <!-- Contador -->
+    <!-- Contador de Tiempo -->
     <section id="contador" data-aos="fade-up" data-aos-duration="1200">
-        <h2>La Cuenta Regresiva</h2>
+        <h2>Faltan</h2>
         <div class="contador-grid">
             <div class="tiempo">
-                <span id="dias">00</span>
+                <span id="days">00</span>
                 <p>Días</p>
             </div>
             <div class="tiempo">
-                <span id="horas">00</span>
+                <span id="hours">00</span>
                 <p>Horas</p>
             </div>
             <div class="tiempo">
-                <span id="minutos">00</span>
+                <span id="minutes">00</span>
                 <p>Minutos</p>
             </div>
             <div class="tiempo">
-                <span id="segundos">00</span>
+                <span id="seconds">00</span>
                 <p>Segundos</p>
             </div>
         </div>
     </section>
 
-    <!-- Nuestra Historia -->
+    <!-- Historia -->
     <section id="historia" data-aos="fade-up" data-aos-duration="1300">
         <h2>Nuestra Historia</h2>
-        <p>Desde que nos conocimos, nuestras vidas cambiaron para siempre. Cada paso nos ha traído hasta aquí, listos para celebrar este hermoso viaje juntos con las personas que más amamos.</p>
+        <p>Desde el primer día en que nos encontramos, sabíamos que algo mágico estaba por ocurrir. Después de años compartiendo momentos inolvidables, ¡estamos listos para dar el siguiente paso y celebrar nuestro amor con todos ustedes!</p>
     </section>
 
     <!-- Lugar del Evento -->
     <section id="evento" data-aos="fade-left" data-aos-duration="1200">
         <h2>Detalles del Evento</h2>
         <div class="imagen-evento">
-            <img src="imagen-lugar.jpg" alt="Lugar del Evento">
+            <img src="imagen-lugar.jpg" alt="Vista del Lugar">
         </div>
-        <p class="ubicacion">El Morrito, 3:30 PM</p>
+        <div class="detalles">
+            <p>Ubicación del Evento:</p>
+            <h3>El Morrito</h3>
+            <p>3:30 PM</p>
+        </div>
     </section>
 
     <!-- Mensaje Final -->
     <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
-        <p>Gracias por ser parte de nuestra historia. ¡Esperamos verte en nuestro día especial!</p>
+        <p>¡Esperamos contar contigo en este día tan especial! Acompáñanos en nuestra historia de amor.</p>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <p>Con todo nuestro amor, <span>Michelle & Oscar</span></p>
+    <!-- Pie de Página -->
+    <footer data-aos="fade-up" data-aos-duration="1000">
+        <p>Con amor, Michelle & Oscar</p>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <!-- AOS Librería -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
