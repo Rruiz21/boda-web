@@ -1,24 +1,22 @@
-// Contador
-const weddingDate = new Date("2025-09-21T15:30:00");
-const interval = setInterval(() => {
-    const now = new Date();
-    const timeLeft = weddingDate - now;
+const fechaBoda = new Date('2025-09-21T15:30:00').getTime();
 
-    if (timeLeft > 0) {
-        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-        const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-        const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-        const seconds = Math.floor((timeLeft / 1000) % 60);
+const actualizarContador = () => {
+    const ahora = new Date().getTime();
+    const diferencia = fechaBoda - ahora;
 
-        document.getElementById("days").textContent = days;
-        document.getElementById("hours").textContent = hours;
-        document.getElementById("minutes").textContent = minutes;
-        document.getElementById("seconds").textContent = seconds;
+    if (diferencia > 0) {
+        const dias = Math.floor(diferencia / (1000 * 60 * 60 * 24));
+        const horas = Math.floor((diferencia % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutos = Math.floor((diferencia % (1000 * 60 * 60)) / (1000 * 60));
+        const segundos = Math.floor((diferencia % (1000 * 60)) / 1000);
+
+        document.getElementById('dias').innerText = dias;
+        document.getElementById('horas').innerText = horas;
+        document.getElementById('minutos').innerText = minutos;
+        document.getElementById('segundos').innerText = segundos;
+    } else {
+        document.getElementById('contador').innerHTML = '<h3>¡Es nuestro día especial!</h3>';
     }
-}, 1000);
+};
 
-// Modo Oscuro
-const modoOscuroBtn = document.getElementById('modo-oscuro-btn');
-modoOscuroBtn.addEventListener('click', () => {
-    document.body.classList.toggle('dark-mode');
-});
+setInterval(actualizarContador, 1000);
