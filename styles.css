@@ -4,15 +4,13 @@
     --color-fondo: #e3dcd4;
     --color-acento: #d1939c;
     --color-neutro: #faf9fe;
+    --degradado-principal: linear-gradient(135deg, #96132f, #d1939c);
 }
 
 body {
     margin: 0;
-    font-family: 'Raleway', sans-serif;
-    background-color: var(--color-fondo);
-    color: var(--color-secundario);
-    text-align: center;
-    line-height: 1.6;
+    font-family: 'Raleway
+::contentReference[oaicite:0]{index=0}
 }
 
 header {
