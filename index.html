@@ -3,55 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda - Michelle & Oscar</title>
+    <title>Invitación de Boda</title>
     <!-- Fuentes y Estilos -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Librería AOS para animaciones -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
     <!-- Encabezado -->
-    <header>
+    <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
         <p class="mensaje-principal">¡Nos Casamos!</p>
-        <p class="mensaje-secundario">Acompáñanos a celebrar nuestro amor</p>
-        <p class="fecha">📅 Fecha: 21 de septiembre de 2025</p>
-        <p class="hora">🕒 Hora: 3:30 PM</p>
+        <p class="sub-mensaje">Acompáñanos a celebrar nuestro amor</p>
+        <p class="fecha-hora">Fecha: 21 de Septiembre de 2025 | Hora: 3:30 PM</p>
     </header>
 
-    <!-- Contador -->
-    <section id="contador">
+    <!-- Contador de Tiempo -->
+    <section id="contador" data-aos="fade-up" data-aos-duration="1200">
         <h2>Faltan</h2>
-        <div class="contador-wrapper">
-            <div class="tiempo">
-                <span id="dias">00</span>
-                <p>Días</p>
-            </div>
-            <div class="tiempo">
-                <span id="horas">00</span>
-                <p>Horas</p>
-            </div>
-            <div class="tiempo">
-                <span id="minutos">00</span>
-                <p>Minutos</p>
-            </div>
-            <div class="tiempo">
-                <span id="segundos">00</span>
-                <p>Segundos</p>
-            </div>
+        <div class="contador-circular">
+            <div class="circle" id="dias"></div>
+            <p>Días</p>
+        </div>
+        <div class="contador-circular">
+            <div class="circle" id="horas"></div>
+            <p>Horas</p>
+        </div>
+        <div class="contador-circular">
+            <div class="circle" id="minutos"></div>
+            <p>Minutos</p>
+        </div>
+        <div class="contador-circular">
+            <div class="circle" id="segundos"></div>
+            <p>Segundos</p>
         </div>
     </section>
 
+    <!-- Confirmación de Asistencia -->
+    <section id="confirmacion" data-aos="zoom-in" data-aos-duration="1200">
+        <h2>Confirmar Asistencia</h2>
+        <button id="rsvp-btn">Confirmar Asistencia</button>
+        <p id="rsvp-mensaje"></p>
+    </section>
+
+    <!-- Galería de Fotos -->
+    <section id="galeria" data-aos="fade-up" data-aos-duration="1300">
+        <h2>Galería de Momentos</h2>
+        <div class="galeria-container">
+            <img src="foto1.jpg" alt="Foto 1">
+            <img src="foto2.jpg" alt="Foto 2">
+            <img src="foto3.jpg" alt="Foto 3">
+        </div>
+    </section>
+
+    <!-- Lugar del Evento -->
+    <section id="mapa" data-aos="fade-left" data-aos-duration="1200">
+        <h2>Ubicación del Evento</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=..." width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </section>
+
     <!-- Mensaje Final -->
-    <section id="mensaje">
-        <p>¡Esperamos contar contigo en este día tan especial!</p>
+    <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
+        <p>"El amor no consiste en mirarse el uno al otro, sino en mirar juntos en la misma dirección."</p>
     </section>
 
     <!-- Pie de Página -->
-    <footer>
+    <footer data-aos="fade-up" data-aos-duration="1000">
         <p>Con amor, Michelle & Oscar</p>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>AOS.init();</script>
 </body>
 </html>
