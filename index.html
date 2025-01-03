@@ -4,31 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
-    <!-- Fuentes y Estilos -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
-    <!-- Librería AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
+    <!-- Botón de Modo Oscuro -->
+    <button id="modo-oscuro-btn">Modo Oscuro 🌙</button>
+
     <!-- Encabezado -->
     <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal">
-            <span class="nos-casamos">¡Nos Casamos!</span>
-            <br>
-            <span class="detalle-evento">Acompáñanos a celebrar nuestro amor</span>
-            <br>
-            <span class="detalle-evento">Fecha: 21 de septiembre de 2025</span>
-            <br>
-            <span class="detalle-evento">Hora: 3:30 p.m.</span>
-        </p>
+        <p class="mensaje-principal">Nos Casamos</p>
+        <p class="sub-mensaje">Acompáñanos a celebrar nuestro amor</p>
+        <p class="fecha">📅 21 de septiembre de 2025 | ⏰ 3:30 PM</p>
     </header>
 
-    <!-- Contador de Tiempo -->
+    <!-- Contador -->
     <section id="contador" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Faltan</h2>
-        <div class="contador-grid">
+        <h2>Cuenta Regresiva</h2>
+        <div id="contador-dias">
             <div class="tiempo">
                 <span id="days">00</span>
                 <p>Días</p>
@@ -48,23 +43,21 @@
         </div>
     </section>
 
-    <!-- Historia -->
-    <section id="historia" data-aos="fade-up" data-aos-duration="1300">
-        <h2>Nuestra Historia</h2>
-        <p>Desde el primer día en que nos encontramos, sabíamos que algo mágico estaba por ocurrir. Después de años compartiendo momentos inolvidables, ¡estamos listos para dar el siguiente paso y celebrar nuestro amor con todos ustedes!</p>
+    <!-- Confirmación de Asistencia -->
+    <section id="confirmacion" data-aos="fade-left" data-aos-duration="1300">
+        <h2>Confirma tu Asistencia</h2>
+        <form id="formulario">
+            <input type="text" placeholder="Tu Nombre" required>
+            <input type="number" placeholder="Número de Invitados" required>
+            <textarea placeholder="Mensaje (opcional)"></textarea>
+            <button type="submit">Enviar</button>
+        </form>
     </section>
 
-    <!-- Lugar del Evento -->
-    <section id="evento" data-aos="fade-left" data-aos-duration="1200">
-        <h2>Detalles del Evento</h2>
-        <div class="imagen-evento">
-            <img src="imagen-lugar.jpg" alt="Vista del Lugar">
-        </div>
-        <div class="detalles">
-            <p>Ubicación del Evento:</p>
-            <h3>El Morrito</h3>
-            <p>3:30 PM</p>
-        </div>
+    <!-- Mapa Interactivo -->
+    <section id="mapa" data-aos="fade-up" data-aos-duration="1300">
+        <h2>Ubicación del Evento</h2>
+        <div id="google-map"></div>
     </section>
 
     <!-- Mensaje Final -->
@@ -74,12 +67,11 @@
 
     <!-- Pie de Página -->
     <footer data-aos="fade-up" data-aos-duration="1000">
-        <p>Con amor, Michelle & Oscar</p>
+        <p>Con amor, Michelle & Oscar ❤️</p>
     </footer>
 
     <!-- Scripts -->
     <script src="script.js"></script>
-    <!-- AOS Librería -->
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
