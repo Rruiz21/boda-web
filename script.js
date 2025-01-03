@@ -1,27 +1,23 @@
-const fechaBoda = new Date('2025-09-21T15:30:00');
+// Contador
+const weddingDate = new Date("2025-09-21T15:30:00");
 
-function actualizarContador() {
-    const ahora = new Date().getTime();
-    const tiempoRestante = fechaBoda - ahora;
+function updateCounter() {
+    const now = new Date();
+    const timeLeft = weddingDate - now;
 
-    if (tiempoRestante > 0) {
-        const dias = Math.floor(tiempoRestante / (1000 * 60 * 60 * 24));
-        const horas = Math.floor((tiempoRestante % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-        const minutos = Math.floor((tiempoRestante % (1000 * 60 * 60)) / (1000 * 60));
-        const segundos = Math.floor((tiempoRestante % (1000 * 60)) / 1000);
+    if (timeLeft > 0) {
+        const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+        const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+        const seconds = Math.floor((timeLeft / 1000) % 60);
 
-        document.getElementById('dias').textContent = dias;
-        document.getElementById('horas').textContent = horas;
-        document.getElementById('minutos').textContent = minutos;
-        document.getElementById('segundos').textContent = segundos;
+        document.getElementById("dias").textContent = days;
+        document.getElementById("horas").textContent = hours;
+        document.getElementById("minutos").textContent = minutes;
+        document.getElementById("segundos").textContent = seconds;
     } else {
-        document.getElementById('contador').innerHTML = "<h3>¡Es nuestro día especial!</h3>";
+        document.getElementById("contador").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
     }
 }
 
-setInterval(actualizarContador, 1000);
-
-// Confirmación de asistencia
-document.getElementById('rsvp-btn').addEventListener('click', function () {
-    document.getElementById('rsvp-mensaje').textContent = "¡Gracias por confirmar tu asistencia!";
-});
+setInterval(updateCounter, 1000);
