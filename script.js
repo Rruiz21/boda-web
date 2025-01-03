@@ -1,6 +1,6 @@
+// Contador
 const weddingDate = new Date("2025-09-21T15:30:00");
-
-function updateCountdown() {
+const interval = setInterval(() => {
     const now = new Date();
     const timeLeft = weddingDate - now;
 
@@ -10,17 +10,15 @@ function updateCountdown() {
         const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
         const seconds = Math.floor((timeLeft / 1000) % 60);
 
-        document.getElementById("days").textContent = days.toString().padStart(2, "0");
-        document.getElementById("hours").textContent = hours.toString().padStart(2, "0");
-        document.getElementById("minutes").textContent = minutes.toString().padStart(2, "0");
-        document.getElementById("seconds").textContent = seconds.toString().padStart(2, "0");
-    } else {
-        document.getElementById("contador").innerHTML = "<h3>¡Es nuestro día especial!</h3>";
+        document.getElementById("days").textContent = days;
+        document.getElementById("hours").textContent = hours;
+        document.getElementById("minutes").textContent = minutes;
+        document.getElementById("seconds").textContent = seconds;
     }
-}
+}, 1000);
 
-// Actualiza cada segundo
-setInterval(updateCountdown, 1000);
-
-// Actualización inicial
-updateCountdown();
+// Modo Oscuro
+const modoOscuroBtn = document.getElementById('modo-oscuro-btn');
+modoOscuroBtn.addEventListener('click', () => {
+    document.body.classList.toggle('dark-mode');
+});
