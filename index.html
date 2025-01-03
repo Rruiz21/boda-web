@@ -4,74 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Invitación de Boda</title>
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <!-- Fuentes y estilos -->
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <!-- Librería AOS -->
     <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
 </head>
 <body>
-    <!-- Botón de Modo Oscuro -->
-    <button id="modo-oscuro-btn">Modo Oscuro 🌙</button>
-
     <!-- Encabezado -->
     <header data-aos="fade-down" data-aos-duration="1000">
         <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal">Nos Casamos</p>
+        <p class="mensaje-principal">¡Nos Casamos!</p>
         <p class="sub-mensaje">Acompáñanos a celebrar nuestro amor</p>
-        <p class="fecha">📅 21 de septiembre de 2025 | ⏰ 3:30 PM</p>
+        <p class="fecha">📅 Fecha: 21 de septiembre de 2025</p>
+        <p class="hora">⏰ Hora: 3:30 PM</p>
     </header>
 
-    <!-- Contador -->
+    <!-- Contador de tiempo -->
     <section id="contador" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Cuenta Regresiva</h2>
-        <div id="contador-dias">
+        <h2>Faltan</h2>
+        <div class="contador-datos">
             <div class="tiempo">
-                <span id="days">00</span>
+                <span id="dias">00</span>
                 <p>Días</p>
             </div>
             <div class="tiempo">
-                <span id="hours">00</span>
+                <span id="horas">00</span>
                 <p>Horas</p>
             </div>
             <div class="tiempo">
-                <span id="minutes">00</span>
+                <span id="minutos">00</span>
                 <p>Minutos</p>
             </div>
             <div class="tiempo">
-                <span id="seconds">00</span>
+                <span id="segundos">00</span>
                 <p>Segundos</p>
             </div>
         </div>
     </section>
 
-    <!-- Confirmación de Asistencia -->
-    <section id="confirmacion" data-aos="fade-left" data-aos-duration="1300">
-        <h2>Confirma tu Asistencia</h2>
-        <form id="formulario">
-            <input type="text" placeholder="Tu Nombre" required>
-            <input type="number" placeholder="Número de Invitados" required>
-            <textarea placeholder="Mensaje (opcional)"></textarea>
-            <button type="submit">Enviar</button>
+    <!-- Formulario de Confirmación -->
+    <section id="confirmacion" data-aos="fade-up" data-aos-duration="1200">
+        <h2>Confirma tu asistencia</h2>
+        <form>
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Tu nombre completo" required>
+
+            <label for="correo">Correo electrónico:</label>
+            <input type="email" id="correo" placeholder="Tu correo electrónico" required>
+
+            <p>Número de invitados: 2</p>
+
+            <button type="submit">Confirmar Asistencia</button>
         </form>
     </section>
 
-    <!-- Mapa Interactivo -->
-    <section id="mapa" data-aos="fade-up" data-aos-duration="1300">
-        <h2>Ubicación del Evento</h2>
-        <div id="google-map"></div>
-    </section>
-
     <!-- Mensaje Final -->
-    <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
+    <section id="mensaje-final" data-aos="fade-up" data-aos-duration="1300">
         <p>¡Esperamos contar contigo en este día tan especial! Acompáñanos en nuestra historia de amor.</p>
     </section>
 
     <!-- Pie de Página -->
-    <footer data-aos="fade-up" data-aos-duration="1000">
-        <p>Con amor, Michelle & Oscar ❤️</p>
+    <footer>
+        <p>Con amor, Michelle & Oscar</p>
     </footer>
 
     <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="scripts.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init();
