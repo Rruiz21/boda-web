@@ -1,51 +1,18 @@
-// Función para activar animaciones de imágenes (fade-in)
-document.addEventListener("scroll", function() {
-  const images = document.querySelectorAll("img");
-  images.forEach((image) => {
-    if (image.getBoundingClientRect().top < window.innerHeight) {
-      image.classList.add("visible");
-    }
-  });
-});
+const weddingDate = new Date("2025-09-21T15:30:00");
 
-// Carrusel de fotos (prev, next y autoplay)
-let currentSlide = 0;
-const images = document.querySelectorAll(".carousel-images img");
+function updateCountdown() {
+    const now = new Date();
+    const timeLeft = weddingDate - now;
 
-function showSlide(index) {
-  if (index >= images.length) currentSlide = 0;
-  if (index < 0) currentSlide = images.length - 1;
-  const offset = -100 * currentSlide;
-  document.querySelector(".carousel-images").style.transform = `translateX(${offset}%)`;
+    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
+    const seconds = Math.floor((timeLeft / 1000) % 60);
+
+    document.getElementById("dias").textContent = days;
+    document.getElementById("horas").textContent = hours;
+    document.getElementById("minutos").textContent = minutes;
+    document.getElementById("segundos").textContent = seconds;
 }
 
-document.querySelector(".next").addEventListener("click", () => {
-  currentSlide++;
-  showSlide(currentSlide);
-});
-
-document.querySelector(".prev").addEventListener("click", () => {
-  currentSlide--;
-  showSlide(currentSlide);
-});
-
-setInterval(() => {
-  currentSlide++;
-  showSlide(currentSlide);
-}, 5000); // Cambiar cada 5 segundos
-
-// Función para inicializar el mapa de Google
-function initMap() {
-  const location = { lat: 13.852, lng: -89.655 }; // Latitud y longitud de El Morrito
-
-  const map = new google.maps.Map(document.getElementById("map"), {
-    zoom: 15,
-    center: location,
-  });
-
-  const marker = new google.maps.Marker({
-    position: location,
-    map: map,
-    title: "¡El Morrito!",
-  });
-}
+setInterval(updateCountdown, 1000);
