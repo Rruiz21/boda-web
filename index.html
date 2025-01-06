@@ -1,60 +1,62 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Invitación de Boda</title>
-  <link rel="stylesheet" href="styles.css"> <!-- Enlaza tu archivo CSS -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitación de Boda - Michelle & Oscar</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-  <!-- Sección de bienvenida -->
-  <section id="welcome">
-    <h1>¡Estás invitado a nuestra boda!</h1>
-    <p>Michelle Argueta & Oscar Ruiz</p>
-  </section>
-
-  <!-- Animación de texto -->
-  <section id="message">
-    <h2>Un Mensaje Especial</h2>
-    <p>
-      Estamos muy emocionados de compartir este día tan especial con ustedes.
-      ¡Gracias por ser parte de nuestra historia! Nos vemos pronto para celebrar nuestro amor.
-    </p>
-  </section>
-
-  <!-- Galería de fotos tipo carrusel -->
-  <div id="photo-carousel" class="carousel">
-    <div class="carousel-images">
-      <img src="image1.jpg" alt="Foto 1">
-      <img src="image2.jpg" alt="Foto 2">
-      <img src="image3.jpg" alt="Foto 3">
+<header>
+    <h1>Michelle Argueta & Oscar Ruiz</h1>
+    <div class="mensaje-principal">
+        <h2>¡Nos Casamos!</h2>
+        <p>Acompáñanos a celebrar nuestro amor</p>
+        <p>Fecha: 21 de Septiembre de 2025 | Hora: 3:30 PM</p>
     </div>
-    <div class="carousel-controls">
-      <button class="prev">←</button>
-      <button class="next">→</button>
+</header>
+
+<section id="contador">
+    <h2>Faltan</h2>
+    <div class="contador-item">
+        <span id="dias">0</span>
+        <p>Días</p>
     </div>
-  </div>
+    <div class="contador-item">
+        <span id="horas">0</span>
+        <p>Horas</p>
+    </div>
+    <div class="contador-item">
+        <span id="minutos">0</span>
+        <p>Minutos</p>
+    </div>
+    <div class="contador-item">
+        <span id="segundos">0</span>
+        <p>Segundos</p>
+    </div>
+</section>
 
-  <!-- Mapa interactivo de ubicación -->
-  <section id="location">
-    <h2>Ubicación</h2>
-    <div id="map"></div>
-    <a href="https://www.google.com/maps?q=El+Morrito" target="_blank">
-      <button>¿Cómo llegar?</button>
-    </a>
-  </section>
+<section id="galeria">
+    <h2>Nuestra Historia</h2>
+    <div class="imagenes-galeria">
+        <img src="images/imagen1.jpg" alt="Imagen 1">
+        <img src="images/imagen2.jpg" alt="Imagen 2">
+        <img src="images/imagen3.jpg" alt="Imagen 3">
+    </div>
+</section>
 
-  <!-- Música de fondo -->
-  <section id="music">
-    <h2>Música de Fondo</h2>
-    <audio controls>
-      <source src="ruta/a-tu-musica.mp3" type="audio/mpeg">
-      Tu navegador no soporta el elemento de audio.
-    </audio>
-  </section>
+<section id="ubicacion">
+    <h2>Ubicación del Evento</h2>
+    <p>El Morrito Salón de Eventos</p>
+    <button onclick="window.open('https://www.google.com/maps/place/El+Morrito+Sal%C3%B3n+de+Eventos/@13.7612473,-89.381066,17z/data=!3m1!4b1!4m6!3m5!1s0x8f6327d4f67a265d:0xd70cc6be235d27cc!8m2!3d13.7612473!4d-89.381066!16s%2Fg%2F11fhh54tjx?entry=ttu&g_ep=EgoyMDI0MTIxMS4wIKXMDSoASAFQAw%3D%3D', '_blank')">Ver en Google Maps</button>
+</section>
 
-  <script src="scripts.js"></script> <!-- Enlaza tu archivo JS -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap"></script> <!-- Google Maps API -->
+<footer>
+    <p>Con mucho amor, Michelle & Oscar</p>
+</footer>
+
+<script src="script.js"></script>
 </body>
 </html>
