@@ -1,75 +1,97 @@
-/* Variables de Colores */
+/* Variables de colores */
 :root {
     --color-principal: #96132f;
     --color-secundario: #a49182;
-    --color-fondo: #e3dcd4;
+    --color-fondo: #f9f4ef;
     --color-acento: #d1939c;
-    --color-neutro: #faf9fe;
 }
 
-/* Estilos Generales */
+/* Estilo general */
 body {
     margin: 0;
     font-family: 'Raleway', sans-serif;
     background-color: var(--color-fondo);
     color: var(--color-secundario);
+    text-align: center;
 }
 
 /* Encabezado */
+header {
+    padding: 40px 20px;
+}
+
 header h1 {
-    font-size: 3.5rem;
+    font-size: 3.8rem;
     color: var(--color-principal);
 }
 
-.mensaje-principal {
+.mensaje-principal h2 {
     font-family: 'Great Vibes', cursive;
     font-size: 2.8rem;
     color: var(--color-acento);
 }
 
-/* Contador Circular */
-.contador-circular {
-    position: relative;
-    display: inline-block;
+.mensaje-principal p {
+    font-size: 1.4rem;
+    color: var(--color-secundario);
 }
 
-.contador-circular svg {
-    width: 120px;
-    height: 120px;
-    transform: rotate(-90deg);
-}
-
-.contador-circular circle {
-    fill: none;
-    stroke-width: 8;
-}
-
-#dias-circle {
-    stroke: var(--color-principal);
-}
-
-#horas-circle {
-    stroke: var(--color-acento);
-}
-
-#minutos-circle {
-    stroke: var(--color-secundario);
-}
-
-#segundos-circle {
-    stroke: var(--color-principal);
-}
-
-/* Confirmación */
-#confirmacion {
+/* Contador */
+#contador {
+    background-color: var(--color-fondo);
     padding: 20px;
-    background-color: var(--color-neutro);
+}
+
+.contador-item {
+    display: inline-block;
+    margin: 20px;
+    text-align: center;
+}
+
+.contador-item span {
+    font-size: 3rem;
+    color: var(--color-principal);
+    font-weight: bold;
+}
+
+/* Galería de imágenes */
+#galeria {
+    padding: 40px;
+}
+
+.imagenes-galeria img {
+    width: 30%;
+    margin: 10px;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.imagenes-galeria img:hover {
+    transform: scale(1.05);
+}
+
+/* Ubicación */
+#ubicacion {
+    padding: 40px;
+}
+
+#ubicacion button {
+    background-color: var(--color-acento);
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+#ubicacion button:hover {
+    background-color: var(--color-principal);
 }
 
 /* Footer */
 footer {
-    background-color: var(--color-principal);
-    color: var(--color-neutro);
     padding: 20px;
-    text-align: center;
+    background-color: var(--color-principal);
+    color: white;
 }
