@@ -3,97 +3,60 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Invitación de Boda</title>
-    <!-- Fuentes y Estilos -->
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;600&display=swap" rel="stylesheet">
+    <title>Invitación de Boda - Michelle & Oscar</title>
     <link rel="stylesheet" href="styles.css">
-    <!-- Librería AOS para Animaciones -->
-    <link rel="stylesheet" href="https://unpkg.com/aos@2.3.1/dist/aos.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Raleway:wght@300;400;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Encabezado -->
-    <header data-aos="fade-down" data-aos-duration="1000">
-        <h1>Michelle Argueta & Oscar Ruiz</h1>
-        <p class="mensaje-principal">¡Nos Casamos!</p>
-        <p class="sub-mensaje">Acompáñanos a celebrar nuestro amor</p>
-        <p class="fecha-hora">Fecha: 21 de Septiembre de 2025 | Hora: 3:30 PM</p>
-    </header>
 
-    <!-- Contador de Tiempo -->
-    <section id="contador" data-aos="fade-up" data-aos-duration="1200">
-        <h2>Faltan</h2>
-        <div class="contador-circular">
-            <svg>
-                <circle cx="60" cy="60" r="54"></circle>
-                <circle cx="60" cy="60" r="54" id="dias-circle"></circle>
-            </svg>
-            <div class="tiempo" id="dias">0</div>
-            <p>Días</p>
-        </div>
-        <div class="contador-circular">
-            <svg>
-                <circle cx="60" cy="60" r="54"></circle>
-                <circle cx="60" cy="60" r="54" id="horas-circle"></circle>
-            </svg>
-            <div class="tiempo" id="horas">0</div>
-            <p>Horas</p>
-        </div>
-        <div class="contador-circular">
-            <svg>
-                <circle cx="60" cy="60" r="54"></circle>
-                <circle cx="60" cy="60" r="54" id="minutos-circle"></circle>
-            </svg>
-            <div class="tiempo" id="minutos">0</div>
-            <p>Minutos</p>
-        </div>
-        <div class="contador-circular">
-            <svg>
-                <circle cx="60" cy="60" r="54"></circle>
-                <circle cx="60" cy="60" r="54" id="segundos-circle"></circle>
-            </svg>
-            <div class="tiempo" id="segundos">0</div>
-            <p>Segundos</p>
-        </div>
-    </section>
+<header>
+    <h1>Michelle Argueta & Oscar Ruiz</h1>
+    <div class="mensaje-principal">
+        <h2>¡Nos Casamos!</h2>
+        <p>Acompáñanos a celebrar nuestro amor</p>
+        <p>Fecha: 21 de Septiembre de 2025 | Hora: 3:30 PM</p>
+    </div>
+</header>
 
-    <!-- Confirmación de Asistencia -->
-    <section id="confirmacion" data-aos="zoom-in" data-aos-duration="1200">
-        <h2>Confirmar Asistencia</h2>
-        <p>Puedes llevar hasta 2 invitados</p>
-        <button id="rsvp-btn">Confirmar Asistencia</button>
-        <p id="rsvp-mensaje"></p>
-    </section>
+<section id="contador">
+    <h2>Faltan</h2>
+    <div class="contador-item">
+        <span id="dias">0</span>
+        <p>Días</p>
+    </div>
+    <div class="contador-item">
+        <span id="horas">0</span>
+        <p>Horas</p>
+    </div>
+    <div class="contador-item">
+        <span id="minutos">0</span>
+        <p>Minutos</p>
+    </div>
+    <div class="contador-item">
+        <span id="segundos">0</span>
+        <p>Segundos</p>
+    </div>
+</section>
 
-    <!-- Galería de Fotos -->
-    <section id="galeria" data-aos="fade-up" data-aos-duration="1300">
-        <h2>Galería de Momentos</h2>
-        <div class="galeria-container">
-            <img src="foto1.jpg" alt="Foto 1">
-            <img src="foto2.jpg" alt="Foto 2">
-            <img src="foto3.jpg" alt="Foto 3">
-        </div>
-    </section>
+<section id="galeria">
+    <h2>Nuestra Historia</h2>
+    <div class="imagenes-galeria">
+        <img src="images/imagen1.jpg" alt="Imagen 1">
+        <img src="images/imagen2.jpg" alt="Imagen 2">
+        <img src="images/imagen3.jpg" alt="Imagen 3">
+    </div>
+</section>
 
-    <!-- Lugar del Evento -->
-    <section id="mapa" data-aos="fade-left" data-aos-duration="1200">
-        <h2>Ubicación del Evento</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.754759846199!2d-89.2076147756209!3d13.491781406632385!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8f62fa4a073db30b%3A0x9a36b98e5b7a6df8!2sEl%20Morrito!5e0!3m2!1ses!2ssv!4v1700000000000" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
-        <button onclick="window.open('https://goo.gl/maps/LINK-AQUÍ')">Ver en Google Maps</button>
-    </section>
+<section id="ubicacion">
+    <h2>Ubicación del Evento</h2>
+    <p>El Morrito</p>
+    <button onclick="window.open('https://goo.gl/maps/YOUR_MAP_LINK', '_blank')">Ver en Google Maps</button>
+</section>
 
-    <!-- Mensaje Final -->
-    <section id="mensaje" data-aos="fade-up" data-aos-duration="1300">
-        <p>"El mejor tipo de amor es el que despierta el alma y nos hace aspirar a más." - Diario de una pasión</p>
-    </section>
+<footer>
+    <p>Con mucho amor, Michelle & Oscar</p>
+</footer>
 
-    <!-- Pie de Página -->
-    <footer data-aos="fade-up" data-aos-duration="1000">
-        <p>Con amor, Michelle & Oscar</p>
-    </footer>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script>AOS.init();</script>
+<script src="script.js"></script>
 </body>
 </html>
