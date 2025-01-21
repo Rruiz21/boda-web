@@ -1,18 +1,34 @@
-const weddingDate = new Date("2025-09-21T15:30:00");
+// script.js
+
+// Countdown
+const targetDate = new Date("2025-09-21T15:30:00").getTime();
 
 function updateCountdown() {
-    const now = new Date();
-    const timeLeft = weddingDate - now;
+  const now = new Date().getTime();
+  const difference = targetDate - now;
 
-    const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
-    const hours = Math.floor((timeLeft / (1000 * 60 * 60)) % 24);
-    const minutes = Math.floor((timeLeft / (1000 * 60)) % 60);
-    const seconds = Math.floor((timeLeft / 1000) % 60);
+  const days = Math.floor(difference / (1000 * 60 * 60 * 24));
+  const hours = Math.floor((difference % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((difference % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((difference % (1000 * 60)) / 1000);
 
-    document.getElementById("dias").textContent = days;
-    document.getElementById("horas").textContent = hours;
-    document.getElementById("minutos").textContent = minutes;
-    document.getElementById("segundos").textContent = seconds;
+  document.getElementById("days").textContent = days;
+  document.getElementById("hours").textContent = hours;
+  document.getElementById("minutes").textContent = minutes;
+  document.getElementById("seconds").textContent = seconds;
 }
 
 setInterval(updateCountdown, 1000);
+
+// Carousel
+let slideIndex = 0;
+
+function showSlides(index) {
+  const slides = document.querySelector(".slides");
+  const totalSlides = slides.children.length;
+  slideIndex = (index + totalSlides) % totalSlides;
+  slides.style.transform = `translateX(-${slideIndex * 100}%)`;
+}
+
+document.querySelector(".prev").addEventListener("click", () => showSlides(slideIndex - 1));
+document.querySelector(".next").addEventListener("click", () => showSlides(slideIndex + 1));
